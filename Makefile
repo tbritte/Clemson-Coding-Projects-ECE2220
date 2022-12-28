@@ -7,13 +7,16 @@ LDLIBS = -lc -lm
 .c.o:
 	$(CC) $(INCLUDE) $(CFLAGS) -c $<
 
-all: prog6
+all: program7
 
-program6: prog6.o bmp.o
+program7: program7.o
+	$(CC) -o $@ $^ $(LDFLAGS) $(LDLIBS)
+
+test: test.o
 	$(CC) -o $@ $^ $(LDFLAGS) $(LDLIBS)
 
 run:
-	./prog6
+	./program7
 
 clean:
 	rm -f *.o
