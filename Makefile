@@ -7,13 +7,13 @@ LDLIBS = -lc -lm
 .c.o:
 	$(CC) $(INCLUDE) $(CFLAGS) -c $<
 
-all: p1
+all: p2
 
-main: p1.o
+main: p2.o
 	$(CC) -o $@ $^ $(LDFLAGS) $(LDLIBS)
 
 run:
-	./p1
+	./p2
 
 clean:
 	rm -f *.o
