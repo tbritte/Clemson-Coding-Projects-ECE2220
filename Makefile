@@ -7,15 +7,14 @@ LDLIBS = -lc -lm
 .c.o:
 	$(CC) $(INCLUDE) $(CFLAGS) -c $<
 
-all: p5
+all: prog6
 
-main: p5.o
+program6: prog6.o bmp.o
 	$(CC) -o $@ $^ $(LDFLAGS) $(LDLIBS)
 
 run:
-	./p5
+	./prog6
 
 clean:
 	rm -f *.o
 	rm -f program
-
